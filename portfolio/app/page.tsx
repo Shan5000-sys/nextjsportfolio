@@ -1,14 +1,5 @@
 import Image from "next/image"
-import { Badge } from "@/components/ui/badge"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card"
-import { Github, ExternalLink, Mail, Linkedin } from "lucide-react"
+import { Mail, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -74,8 +65,7 @@ export default function Home() {
       <section className="container mx-auto py-12 px-4">
         <h2 className="text-3xl font-bold mb-8">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Project cards go here (unchanged from your version) */}
-          {/* ... */}
+          {/* Project cards go here */}
         </div>
       </section>
 
