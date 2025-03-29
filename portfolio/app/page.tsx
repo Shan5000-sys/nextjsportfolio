@@ -70,7 +70,8 @@ export default function Home() {
       <section className="container mx-auto py-12 px-4">
         <h2 className="text-3xl font-bold mb-8">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Project: Migration to CDK */}
+
+          {/* Migration to CDK */}
           <Card>
             <CardHeader>
               <CardTitle>Migration to CDK</CardTitle>
@@ -99,7 +100,7 @@ export default function Home() {
             </CardFooter>
           </Card>
 
-          {/* Project: Next.js Portfolio */}
+          {/* Next.js Portfolio */}
           <Card>
             <CardHeader>
               <CardTitle>Next.js Portfolio</CardTitle>
@@ -132,6 +133,78 @@ export default function Home() {
               </Button>
             </CardFooter>
           </Card>
+
+          {/* Serverless CI/CD Pipeline */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Serverless CI/CD Pipeline</CardTitle>
+              <CardDescription>
+                Built a scalable serverless pipeline for processing over 1M events/day using AWS Lambda and Terraform.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Developed an event-driven data pipeline leveraging AWS services like Lambda, S3, and DynamoDB.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">AWS</Badge>
+                <Badge variant="secondary">Serverless</Badge>
+                <Badge variant="secondary">Terraform</Badge>
+                <Badge variant="secondary">Python</Badge>
+                <Badge variant="secondary">Lambda</Badge>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://github.com/Shan5000-sys/serverless-pipeline" target="_blank">
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+              <Button size="sm" asChild>
+                <a href="https://your-demo-link.com" target="_blank">
+                  <ExternalLink className="h-4 w-4" />
+                  Demo
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Infrastructure as Code Framework */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Infrastructure as Code Framework</CardTitle>
+              <CardDescription>
+                Reusable Terraform framework for provisioning AWS infrastructure with modular best practices.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Designed and documented a foundational IaC setup with video walkthrough support for easy adoption.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">Terraform</Badge>
+                <Badge variant="secondary">AWS</Badge>
+                <Badge variant="secondary">IaC</Badge>
+                <Badge variant="secondary">Infrastructure</Badge>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://github.com/Shan5000-sys/iac-framework" target="_blank">
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+              <Button size="sm" asChild>
+                <a href="https://your-demo-link.com" target="_blank">
+                  <ExternalLink className="h-4 w-4" />
+                  Demo
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
         </div>
       </section>
 
@@ -160,4 +233,3 @@ export default function Home() {
     </main>
   )
 }
-
