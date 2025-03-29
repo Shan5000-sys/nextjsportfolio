@@ -1,0 +1,302 @@
+import Image from "next/image"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Github, ExternalLink, Mail, Linkedin } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="container mx-auto pt-12 pb-6 px-4">
+        <div className="flex flex-col items-center text-center gap-6">
+          <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/10 mx-auto">
+          <Image
+            src="/image.jpeg"
+            alt="Shangeeth Umasaran"
+            width={192}
+            height={192}
+            className="object-cover w-full h-full"
+            priority
+          />
+          </div>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight">Shangeeth Umasaran</h1>
+            <p className="text-xl text-muted-foreground mt-2">Cloud Engineering Professional</p>
+            <div className="flex gap-3 mt-4 justify-center">
+              <Button variant="outline" size="icon" asChild>
+                <a href="https://github.com/Shan5000-sys" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-4 w-4" />
+                  <span className="sr-only">GitHub</span>
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <a
+                  href="https://www.linkedin.com/in/shangeeth-umasaran-15885967/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  <span className="sr-only">LinkedIn</span>
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <a href="mailto:shangeeth023@gmail.com">
+                  <Mail className="h-4 w-4" />
+                  <span className="sr-only">Email</span>
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* About Section */}
+      <section className="container mx-auto py-12 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6">About Me</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            I'm a cloud engineering professional specializing in AWS infrastructure, IaC (Infrastructure as Code), and
+            cloud-native application development. With expertise in CloudFormation, CDK, Terraform, and various AWS
+            services, I build scalable, secure, and efficient cloud solutions.
+          </p>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="container mx-auto py-12 px-4">
+        <h2 className="text-3xl font-bold mb-8">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Project 1 */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Migration to CDK</CardTitle>
+              <CardDescription>
+                Migrated legacy infrastructure to AWS CDK for improved maintainability and deployment automation
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Transformed manual infrastructure provisioning to code-based approach using AWS CDK, resulting in
+                consistent deployments and reduced provisioning time by 70%.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">AWS CloudFormation</Badge>
+                <Badge variant="secondary">TypeScript</Badge>
+                <Badge variant="secondary">S3</Badge>
+                <Badge variant="secondary">EC2</Badge>
+                <Badge variant="secondary">RDS</Badge>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://github.com/Shan5000-sys/migrationtocdk"
+                  className="flex items-center gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+              <Button size="sm" asChild>
+                <a href="#" className="flex items-center gap-1">
+                  <ExternalLink className="h-4 w-4" />
+                  Demo
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Project 2 */}
+          <Card>
+            <CardHeader>
+              <CardTitle>NextJS Portfolio</CardTitle>
+              <CardDescription>Modern portfolio website built with Next.js and deployed on AWS Amplify</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Designed and developed a responsive portfolio website using Next.js with CI/CD pipeline through GitHub
+                and AWS Amplify for automatic deployments.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">AWS Amplify</Badge>
+                <Badge variant="secondary">S3</Badge>
+                <Badge variant="secondary">GitHub</Badge>
+                <Badge variant="secondary">Next.js</Badge>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://github.com/Shan5000-sys/nextjsportfolio"
+                  className="flex items-center gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+              <Button size="sm" asChild>
+                <a href="#" className="flex items-center gap-1">
+                  <ExternalLink className="h-4 w-4" />
+                  Demo
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Project 3 */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Terraform Portfolio Project</CardTitle>
+              <CardDescription>
+                Infrastructure as Code implementation using Terraform for a Node.js application
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Created a modular Terraform codebase to provision and manage infrastructure for a Node.js application,
+                including networking, compute, and storage resources.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">NodeJS</Badge>
+                <Badge variant="secondary">Terraform</Badge>
+                <Badge variant="secondary">S3</Badge>
+                <Badge variant="secondary">EC2</Badge>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://github.com/Shan5000-sys/terraform-portfolio-project"
+                  className="flex items-center gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+              <Button size="sm" asChild>
+                <a href="#" className="flex items-center gap-1">
+                  <ExternalLink className="h-4 w-4" />
+                  Demo
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Project 4 */}
+          <Card>
+            <CardHeader>
+              <CardTitle>CI/CD Pipeline</CardTitle>
+              <CardDescription>Automated deployment pipeline for cloud infrastructure and applications</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Designed and implemented a comprehensive CI/CD pipeline that automates testing, building, and deployment
+                of applications to AWS infrastructure, reducing deployment time by 85% and eliminating manual
+                configuration errors.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">AWS Lambda</Badge>
+                <Badge variant="secondary">CloudFormation</Badge>
+                <Badge variant="secondary">EC2</Badge>
+                <Badge variant="secondary">S3</Badge>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://github.com/Shan5000-sys/lambda-cicd"
+                  className="flex items-center gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+              <Button size="sm" asChild>
+                <a href="#" className="flex items-center gap-1">
+                  <ExternalLink className="h-4 w-4" />
+                  Demo
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Project 5 */}
+          <Card className="md:col-span-2">
+            <CardHeader>
+              <CardTitle>GitHub Actions Worklab</CardTitle>
+              <CardDescription>Automated CI/CD workflows with GitHub Actions</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Developed a comprehensive set of GitHub Actions workflows to automate the entire software development
+                lifecycle. Created reusable workflow templates that handle testing, building, and deploying applications
+                across multiple environments. This implementation reduced deployment time by 90% and enabled developers
+                to focus on writing code rather than managing infrastructure.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">GitHub Actions</Badge>
+                <Badge variant="secondary">Worklab</Badge>
+                <Badge variant="secondary">AWS Route53</Badge>
+                <Badge variant="secondary">CloudWatch</Badge>
+                <Badge variant="secondary">EventBridge</Badge>
+                <Badge variant="secondary">S3 Cross-Region Replication</Badge>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://github.com/Shan5000-sys/github_actions_workflowlab"
+                  className="flex items-center gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+              <Button size="sm" asChild>
+                <a href="#" className="flex items-center gap-1">
+                  <ExternalLink className="h-4 w-4" />
+                  Case Study
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="container mx-auto py-12 px-4">
+        <div className="max-w-md mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-muted-foreground mb-6">
+            Interested in working together? Feel free to reach out for collaborations or just a friendly chat.
+          </p>
+          <Button asChild>
+            <a href="mailto:shangeeth023@gmail.com" className="flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              Contact Me
+            </a>
+          </Button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t py-6 md:py-8">
+        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} Shangeeth Umasaran. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+  )
+}
+
