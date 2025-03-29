@@ -18,14 +18,14 @@ export default function Home() {
       <header className="container mx-auto pt-12 pb-6 px-4">
         <div className="flex flex-col items-center text-center gap-6">
           <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/10 mx-auto">
-            <Image
-              src="/image.jpeg"
-              alt="Shangeeth Umasaran"
-              width={192}
-              height={192}
-              className="object-cover w-full h-full"
-              priority
-            />
+      <Image
+        src="/image.jpeg"
+        alt="Shangeeth Umasaran"
+        width={192}
+        height={192}
+        className="object-cover w-full h-full"
+        priority
+      />
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight">Shangeeth Umasaran</h1>
