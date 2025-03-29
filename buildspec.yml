@@ -3,14 +3,15 @@ frontend:
   phases:
     preBuild:
       commands:
+        - cd portfolio
         - npm install
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: .next
+    baseDirectory: portfolio/.next
     files:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/*
+      - portfolio/node_modules/**/*
